@@ -1,0 +1,129 @@
+/* style.css */
+
+/* CSS Custom Properties (Variables) */
+:root {
+    /* Dark Palette */
+    --color-dark-gray: #1a1a1a;
+    --color-navy: #0a0a1a;
+    --color-black: #000000;
+
+    /* Accent Colors (Cyberpunk/Tech-inspired) */
+    --color-electric-blue: #00FFFF; /* Cyan */
+    --color-deep-purple: #8A2BE2; /* BlueViolet */
+    --color-lime-green: #32CD32; /* LimeGreen */
+    --color-cyber-magenta: #FF00FF; /* Magenta */
+
+    /* Text Colors */
+    --color-light-gray: #CCCCCC;
+    --color-white: #FFFFFF;
+}
+
+/* Basic Reset & Body Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace, 'Noto Sans JP', sans-serif; /* Example fonts */
+    background-color: var(--color-dark-gray);
+    color: var(--color-light-gray);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Layout & Typography */
+header,
+main,
+footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: var(--color-electric-blue);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: var(--color-electric-blue);
+    text-align: center;
+    margin-bottom: 25px; /* 少しマージンを増やす */
+    text-transform: uppercase; /* 大文字に変換 */
+    letter-spacing: 2px; /* 文字間隔を広げる */
+    padding-bottom: 5px; /* 下に少しパディング */
+    border-bottom: 1px solid var(--color-deep-purple); /* 下線を追加 */
+    display: inline-block; /* 下線がタイトル幅になるように */
+    margin-left: auto; /* 中央寄せ */
+    margin-right: auto; /* 中央寄せ */
+}
+
+/* コンテンツブロックのスタイル */
+.text-content {
+    background-color: rgba(10, 10, 26, 0.7); /* 少し透明なネイビー */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.4); /* ディープパープルの光彩 */
+    max-width: 900px; /* 最大幅を設定 */
+    margin: 40px auto; /* 上下のマージンと中央寄せ */
+    border: 1px solid var(--color-deep-purple); /* 枠線 */
+}
+
+.text-content p,
+.text-content ul {
+    margin-bottom: 15px;
+    text-align: left; /* 本文は左寄せを維持 */
+}
+
+.text-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.text-content ul li::before {
+    content: '>'; /* Simple bullet point */
+    color: var(--color-lime-green);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Product Block Styling */
+.product-block {
+    margin-bottom: 60px; /* 各製品ブロック間のスペース */
+    padding-top: 20px; /* 上部に少しパディング */
+    border-top: 1px dashed var(--color-deep-purple); /* 区切り線 */
+}
+
+.product-block:first-of-type {
+    border-top: none; /* 最初のブロックには区切り線を適用しない */
+    padding-top: 0; /* 最初のブロックには上部パディングを適用しない */
+}
+
+/* Video Section */
+.video-section {
+    margin-bottom: 40px;
+    background-color: var(--color-black);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Electric blue glow */
+}
+
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+a {
+    color: var(--color-lime-green); /* URLを目立たせる色 */
+    text-decoration: none;
+    text-shadow: 0 0 5px rgba(50, 205, 50, 0.7); /* わずかな光彩効果 */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-electric-blue); /* ホバー時に色を変更 */
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.9); /* ホバー時に光彩を強める */
+}
